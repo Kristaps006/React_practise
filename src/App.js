@@ -1,67 +1,48 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from "react";
-import UserOutput from "./UserOutput/UserOutput";
-import UserInput from "./UserInput/UserInput";
+import Validation from "./Validation/ValidationComponent";
+import Char from "./Char/Char";
 
 class App extends React.Component {
   state = {
-    firstName: [{ name: "Mikkel" }, { name: "Jan" }, { name: "Theodor" }],
+    userInput: "",
   };
 
-  nameChange = (newName) => {
-    this.setState({
-      firstName: [{ name: "Mikkel" }, { name: "Jan" }, { name: "Theodor" }],
-    });
+  changeText = (e) => {
+    this.setState({ userInput: e.target.value });
   };
 
-  nameInput = (e) => {
-    this.setState({
-      firstName: [
-        { name: e.target.value },
-        { name: "Jan" },
-        { name: e.target.value },
-      ],
-    });
+  deleteChar = (index) => {
+    const text = this.state.userInput.split("");
+    text.splice(index, 1);
+    const updatedText = text.join("");
+    this.setState({ userInput: updatedText });
   };
 
   render() {
-    const button = {
-      backgroundColor: "olive",
-      fontSize: "11",
-      boxShadow: "1px 2px 3px #ccc",
-      color: "black",
-      borderRadius: "3px",
-    };
+    const charList = this.state.userInput.split("").map((char, index) => {
+      return (
+        <Char
+          character={char}
+          key={index}
+          clicked={() => this.deleteChar(index)}
+        />
+      );
+    });
 
     return (
-      <div className="App">
-        <UserOutput username="Kris" time="first" language="React">
-          <div>
-            This is very hard to write in React when you are not use to it
-          </div>
-        </UserOutput>
+      <div>
+        <h1>Assignment 1</h1>
 
-        <UserOutput
-          buttonclick={this.nameChange.bind(this, "Claus")}
-          username={this.state.firstName[0].name}
-          time="third"
-          language="Vue"
+        <input
+          type="text"
+          onChange={this.changeText}
+          value={this.state.userInput}
         />
-        <UserOutput
-          username={this.state.firstName[2].name}
-          time="second"
-          language="html"
-        />
-        <UserInput change={this.nameInput} />
-        <UserOutput username="Marianne" time="fifth" language="css">
-          <div>
-            This is very hard to write in React when you are not use to it
-          </div>
-        </UserOutput>
-        <button onClick={this.nameChange} style={button}>
-          Magic Button
-        </button>
+        <p>{this.state.userInput}</p>
+        <Validation inputLength={this.state.userInput.length} />
+        {charList}
       </div>
     );
   }
