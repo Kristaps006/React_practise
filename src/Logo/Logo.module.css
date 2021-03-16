@@ -1,0 +1,6 @@
+.Logo {
+  display: grid;
+  grid-column: logo-start/logo-end;
+  grid-row: 1/ -1;
+  background-color: aqua;
+}

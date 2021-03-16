@@ -1,8 +1,8 @@
 import React from "react";
-import "./Landing.css";
+import styles from "./Landing.module.css";
 
 const nav = (props) => {
-  return <div className="Landing"></div>;
+  return <div className={styles.Landing}></div>;
 };
 
 export default nav;
