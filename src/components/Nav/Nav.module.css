@@ -1,0 +1,48 @@
+.Nav {
+  grid-column: middle-start/email-end;
+  font-size: 2rem;
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  animation: Fade-down 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+ul.list {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+ul.list li {
+  text-decoration: none;
+  display: inline;
+  margin-right: 5rem;
+  animation: Fade-down 4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+ul.list a {
+  text-decoration: none;
+  color: black;
+}
+
+.color {
+  color: blue;
+}
+
+@keyframes Fade-down {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+    color: aqua;
+  }
+  50% {
+    transform: translateX(50px);
+    opacity: 0.5;
+    color: black;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+    color: black;
+  }
+} ;

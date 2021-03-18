@@ -1,18 +1,16 @@
 import React from "react";
 import styles from "./Nav.module.css";
 
-const nav = (props) => {
-  const navList = ["Home", "About", "Experience", "Contact"];
+const nav = () => {
+  const navItems = ["Home", "About", "Experience", "Contact"];
 
   return (
     <div className={styles.Nav}>
       <ul className={styles.list}>
-        {navList.map((nav) => {
+        {navItems.map((nav, id) => {
           return (
-            <li>
-              <a className={styles.Link} href="#">
-                {nav}
-              </a>
+            <li key={id}>
+              <a href="#">{nav}</a>
             </li>
           );
         })}
