@@ -1,0 +1,9 @@
+.NavigationItems {
+  background-color: bisque;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  font-size: 2rem;
+}

@@ -1,0 +1,17 @@
+.NavItems {
+  margin-right: 1rem;
+}
+
+.NavItems a {
+  text-decoration: none;
+  color: black;
+}
+
+.NavItems a:hover,
+.NavItems a:active,
+.NavItems a.active {
+  color: olivedrab;
+}
+
+@keyframes fade-in {
+}
