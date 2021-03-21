@@ -1,14 +1,13 @@
-.NavigationItems {
+.Logo {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  list-style-type: none;
-  font-size: 2rem;
-  animation: stretchLeft 1.5s ease-out;
-  transform-origin: 100% 0%;
+  height: fit-content;
+  justify-content: space-between;
+  margin-left: 1rem;
+  animation: stretchRight 1.5s ease-out;
+  transform-origin: 0% 0%;
 }
 
-@keyframes stretchLeft {
+@keyframes stretchRight {
   0% {
     transform: scaleX(0.3);
   }

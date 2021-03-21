@@ -1,0 +1,9 @@
+.NavigationItems {
+  display: none;
+}
+
+.Nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+}

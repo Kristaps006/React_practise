@@ -1,12 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 import NavigationItems from "./NavigationItems/NavigationItems";
 import classes from "./Header.module.css";
+import Logo from "../Header/NavigationItems/Logo/Logo";
 
-const header = () => (
-  <React.Fragment>
-    <div>LOGO</div>
-    <NavigationItems />
-  </React.Fragment>
-);
+class Header extends React.Component {
+  state = {
+    windowPosition: window.pageYOffset,
+  };
 
-export default header;
+  render() {
+    return (
+      <React.Fragment>
+        <Logo fillGithub="red" fillLinkedin="purple" />
+        <NavigationItems />
+      </React.Fragment>
+    );
+  }
+}
+
+export default Header;

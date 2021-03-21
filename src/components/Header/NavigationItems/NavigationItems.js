@@ -4,7 +4,7 @@ import classes from "./NavigationItems.module.css";
 
 const navigationItems = (props) => {
   return (
-    <nav>
+    <nav className={props.try}>
       <ul className={classes.NavigationItems}>
         <NavItems link="/" active>
           Home
