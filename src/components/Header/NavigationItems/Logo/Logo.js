@@ -1,7 +1,4 @@
 import React from "react";
-import LinkedIn from "../../../../assets/svg/linkedin.svg";
-import GitHub from "../../../../assets/svg/github.svg";
-
 import classes from "./Logo.module.css";
 
 const logo = (props) => {

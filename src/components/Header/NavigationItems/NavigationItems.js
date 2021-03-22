@@ -4,8 +4,10 @@ import classes from "./NavigationItems.module.css";
 
 const navigationItems = (props) => {
   return (
-    <nav className={props.try}>
-      <ul className={classes.NavigationItems}>
+    <nav>
+      <ul
+        className={[classes.NavigationItems, classes[props.navType]].join(" ")}
+      >
         <NavItems link="/" active>
           Home
         </NavItems>
