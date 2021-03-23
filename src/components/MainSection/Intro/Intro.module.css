@@ -1,0 +1,10 @@
+.Intro {
+  background-color: gray;
+  width: 50%;
+  height: 100%;
+}
+
+.Intro h1 {
+  text-align: center;
+  padding-top: 3rem;
+}
