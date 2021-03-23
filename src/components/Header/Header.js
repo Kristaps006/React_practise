@@ -6,6 +6,7 @@ import Logo from "../Header/NavigationItems/Logo/Logo";
 class Header extends React.Component {
   state = {
     nav: "",
+    socialLinks: "",
   };
 
   componentDidMount() {
@@ -13,24 +14,27 @@ class Header extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll");
+    window.removeEventListener("scroll", this.handleNav);
   }
 
   handleNav = () => {
     const innerHeight = window.innerHeight;
-    const currentScroll = window.pageYOffset;
 
     if (window.scrollY > innerHeight) {
-      this.setState({ nav: "sticky" });
+      this.setState({ nav: "sticky", socialLinks: "fixed" });
     } else {
-      this.setState({ nav: "" });
+      this.setState({ nav: "", socialLinks: "" });
     }
   };
 
   render() {
     return (
       <React.Fragment>
-        <Logo fillGithub="red" fillLinkedin="purple" />
+        <Logo
+          linkFixed={this.state.socialLinks}
+          fillGithub="red"
+          fillLinkedin="purple"
+        />
         <NavigationItems navType={this.state.nav} />
       </React.Fragment>
     );

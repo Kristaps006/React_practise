@@ -3,7 +3,7 @@ import classes from "./Logo.module.css";
 
 const logo = (props) => {
   return (
-    <div className={classes.Logo}>
+    <div className={[classes.Logo, classes[props.linkFixed]].join(" ")}>
       <a href="/">
         <svg
           version="1.1"
