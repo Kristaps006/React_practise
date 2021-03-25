@@ -1,0 +1,12 @@
+.Email {
+  color: #ddf8e8;
+  grid-column: email-start/ email-end;
+  grid-row: 2/-1;
+  writing-mode: vertical-rl;
+  font-size: 1.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  top: 50vh;
+}

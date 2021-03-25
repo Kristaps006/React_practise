@@ -1,0 +1,13 @@
+.Button {
+  display: block;
+  width: 12rem;
+  height: 4rem;
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+  color: #ddf8e8;
+  cursor: pointer;
+  transform: translateX(5rem) translateY(-10rem);
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px white;
+}

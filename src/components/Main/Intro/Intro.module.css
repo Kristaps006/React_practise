@@ -1,0 +1,45 @@
+.Intro {
+  grid-column: middle-start/middle-end;
+  grid-row: 2/3;
+  background-size: cover;
+  background-blend-mode: hard-light;
+  color: black;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: orchid;
+}
+
+.Text {
+  width: 70%;
+  padding-top: 3rem;
+  color: floralwhite;
+}
+
+.Text h1 {
+  font-size: 2rem;
+  transform: translateX(5rem);
+}
+
+.Text p {
+  width: 50vw;
+  text-align: justify;
+  color: white;
+  background-color: #02020bd0;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  position: absolute;
+  transform: translateX(5rem);
+}
+
+.Intro img {
+  display: block;
+  justify-self: end;
+  margin-right: 4rem;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  border: solid black 1px;
+  box-shadow: -10px 5px 20px rgba(0, 0, 0, 0.5);
+}
